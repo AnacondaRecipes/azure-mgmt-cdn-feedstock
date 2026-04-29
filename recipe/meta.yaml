@@ -10,7 +10,7 @@ source:
   sha256: b7c3ee2189234b4af51ace2924927c5fd733f3de748a642d6d5040067c8c9ddd
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<36]
 
@@ -26,7 +26,7 @@ requirements:
     - azure-common >=1.1,<2
     - azure-mgmt-core>=1.3.0,<2.0.0
 
-tests:
+test:
   imports:
     - azure.mgmt.cdn
     - azure.mgmt.cdn.aio
